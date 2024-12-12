@@ -1,6 +1,6 @@
 
 
-python -m venv jupyterhub-env
+python3 -m venv jupyterhub-env
 source jupyterhub-env/bin/activate  # On Windows: jupyterhub-env\Scripts\activate
 
 pip install jupyterhub
