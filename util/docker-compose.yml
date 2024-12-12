@@ -5,9 +5,9 @@ services:
     image: jupyterhub/jupyterhub:latest
     container_name: jupyterhub
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - jupyterhub_data:/data
-      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+      - /run/podman/podman.sock:/var/run/docker.sock:Z  # Changed from docker.sock
+      - jupyterhub_data:/data:Z  # Added :Z for SELinux
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:Z
     ports:
       - "8000:8000"
     environment:
