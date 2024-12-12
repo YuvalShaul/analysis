@@ -15,3 +15,5 @@ pip install jupyterhub-dockerspawner
 
 mkdir jupyterhub
 cd jupyterhub
+
+docker-compose up -d
