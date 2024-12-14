@@ -3,6 +3,7 @@ version: '3'
 services:
   jupyterhub:
     image: jupyterhub/jupyterhub:latest
+    command: jupyterhub -f /etc/jupyterhub/jupyterhub_config.py  
     container_name: jupyterhub
     volumes:
     - jupyterhub_data:/data
