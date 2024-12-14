@@ -14,13 +14,13 @@ useradd -m -s /bin/bash dave || echo "User dave already exists"
 useradd -m -s /bin/bash john || echo "User john already exists"
 
 # Set passwords
-echo "yuval:$PASS_DAVE" | chpasswd
+echo "dave:$PASS_DAVE" | chpasswd
 echo "john:$PASS_JOHN" | chpasswd
 
 # Print the credentials (they will appear in docker logs)
 echo "=========================="
 echo "Generated credentials:"
-echo "User: yuval  Password: $PASS_DAVE"
+echo "User: dave  Password: $PASS_DAVE"
 echo "User: john   Password: $PASS_JOHN"
 echo "=========================="
 
