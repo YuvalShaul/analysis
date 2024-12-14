@@ -2,6 +2,7 @@ from traitlets.config import get_config
 from jupyterhub.auth import DummyAuthenticator
 import os
 
+print('Loding this file!!!')
 c = get_config()
 
 # Authentication settings - put these first!
