@@ -25,13 +25,13 @@ c.DockerSpawner.remove = True
 c.JupyterHub.log_level = 'DEBUG'
 
 # Use Local Authenticator
-c.JupyterHub.authenticator_class = DummyAuthenticator
 
 c.DummyAuthenticator.password = "test123"  # Set a specific password for testing
 c.LocalAuthenticator.create_system_users = True
 c.Authenticator.admin_users = {'yuval'}
 
 c.Authenticator.allowed_users = {'yuval'}
+c.JupyterHub.authenticator_class = DummyAuthenticator
 
 c.JupyterHub.cookie_secret = bytes(32)  # Generate a random cookie secret
 c.ConfigurableHTTPProxy.auth_token = bytes(32)  # Generate a random token
