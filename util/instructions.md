@@ -24,6 +24,7 @@ git clone https://github.com/YuvalShaul/analysis.git
 ```
 - Install docker using a script:
 ```
+cd analysis/util
 source install_docker_ubuntu
 ```
 
