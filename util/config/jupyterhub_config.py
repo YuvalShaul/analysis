@@ -1,6 +1,6 @@
 from traitlets.config import get_config
 from jupyterhub.auth import DummyAuthenticator
-from jupyterhub.spawner import SimpleSpawner
+from jupyterhub.spawner import LocalProcessSpawner
 import os
 
 print('Loding this file!!!')
@@ -21,7 +21,7 @@ c.JupyterHub.port = 8000
 
 # Use DockerSpawner
 # c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
-c.JupyterHub.spawner_class = 'jupyterhub.spawner.SimpleSpawner'
+c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
 
 # c.DockerSpawner.image = os.environ['DOCKER_JUPYTER_IMAGE']
 # c.DockerSpawner.network_name = 'jupyterhub-network'
