@@ -1,5 +1,6 @@
 from traitlets.config import get_config
 from jupyterhub.auth import DummyAuthenticator
+from jupyterhub.spawner import SimpleSpawner
 import os
 
 print('Loding this file!!!')
