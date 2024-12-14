@@ -1,3 +1,14 @@
+## Installing jupyterhub
+
+After initial preparations and running the server, you will have 30 users:
+- user: student1  pass:student1
+- user: student2  pass:student2  
+. . .  
+- user: student29  pass:student29
+- user: student3  pass:student30
+and also:  
+user: yuval password:yuval  
+which is the admin.  
 
 
 ### Preparations
@@ -11,22 +22,15 @@ sudo apt install git-all
 ```
 git clone https://github.com/YuvalShaul/analysis.git
 ```
-- Install docker:
+- Install docker using a script:
 ```
 source install_docker_ubuntu
 ```
 
-## Conf
+## RUN
 
-- exec into the container:
+- Start docker compose:
 ```
-docker exec -it jupyterhub bash
+docker compose up -d
 ```
-- Create a new system user:
-```
-adduser yuval
-```
-- Restart compose:
-```
-docker compose restart jupyterhub
-```
+
