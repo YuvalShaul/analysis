@@ -7,11 +7,25 @@ import os
 print('Loding this file!!!')
 c = get_config()
 
+class MyDummyAuthenticator(DummyAuthenticator):
+    passwords = {
+        'yuval': 'yuval',
+        'john': 'john'
+    }
+    
+    async def authenticate(self, handler, data):
+        username = data['username']
+        password = data['password']
+        if username in self.passwords and password == self.passwords[username]:
+            return username
+        return None
+    
+
 # Authentication settings - put these first!
 c.JupyterHub.authenticator_class = DummyAuthenticator
-c.DummyAuthenticator.password = "test123"
-c.Authenticator.admin_users = {'yuval'}
-c.Authenticator.allowed_users = {'yuval'}
+# c.DummyAuthenticator.password = "test123"
+c.Authenticator.admin_users = {'yuval', 'john'}
+c.Authenticator.allowed_users = {'yuval', 'john'}
 
 # Remove this line as it's for LocalAuthenticator
 # c.LocalAuthenticator.create_system_users = True
