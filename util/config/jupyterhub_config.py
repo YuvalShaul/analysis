@@ -20,11 +20,11 @@ c.JupyterHub.port = 8000
 
 # Use DockerSpawner
 # c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
-c.JupyterHub.spawner_class = "simple"
+c.JupyterHub.spawner_class = 'jupyterhub.spawner.SimpleSpawner'
 
-c.DockerSpawner.image = os.environ['DOCKER_JUPYTER_IMAGE']
-c.DockerSpawner.network_name = 'jupyterhub-network'
-c.DockerSpawner.remove = True
+# c.DockerSpawner.image = os.environ['DOCKER_JUPYTER_IMAGE']
+# c.DockerSpawner.network_name = 'jupyterhub-network'
+# c.DockerSpawner.remove = True
 
 # Debug and security
 c.JupyterHub.log_level = 'DEBUG'
