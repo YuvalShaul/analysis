@@ -24,8 +24,10 @@ c.JupyterHub.log_level = 'DEBUG'
 
 # Use Local Authenticator
 c.JupyterHub.authenticator_class = 'jupyterhub.auth.LocalAuthenticator'
-
+c.LocalAuthenticator.create_system_users = True
 c.Authenticator.admin_users = {'yuval'}
 
-c.JupyterHub.authenticator_class = 'jupyterhub.auth.LocalAuthenticator'
-c.LocalAuthenticator.create_system_users = True
+c.Authenticator.allowed_users = {'yuval'}
+
+
+
