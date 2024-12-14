@@ -7,7 +7,7 @@ services:
     volumes:
       - /run/podman/podman.sock:/var/run/docker.sock:Z  # Changed from docker.sock
       - jupyterhub_data:/data:Z  # Added :Z for SELinux
-      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:Z
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
     ports:
       - "8000:8000"
     environment:
