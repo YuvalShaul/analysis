@@ -1,4 +1,6 @@
 from traitlets.config import get_config
+from jupyterhub.auth import DummyAuthenticator
+
 import os
 
 c = get_config()
@@ -23,7 +25,8 @@ c.DockerSpawner.remove = True
 c.JupyterHub.log_level = 'DEBUG'
 
 # Use Local Authenticator
-c.JupyterHub.authenticator_class = 'jupyterhub.auth.DummyAuthenticator'
+c.JupyterHub.authenticator_class = DummyAuthenticator
+
 c.DummyAuthenticator.password = "test123"  # Set a specific password for testing
 c.LocalAuthenticator.create_system_users = True
 c.Authenticator.admin_users = {'yuval'}
