@@ -18,7 +18,9 @@ c.JupyterHub.ip = '0.0.0.0'
 c.JupyterHub.port = 8000
 
 # Use DockerSpawner
-c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
+# c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
+c.JupyterHub.spawner_class = "simple"
+
 c.DockerSpawner.image = os.environ['DOCKER_JUPYTER_IMAGE']
 c.DockerSpawner.network_name = 'jupyterhub-network'
 c.DockerSpawner.remove = True
