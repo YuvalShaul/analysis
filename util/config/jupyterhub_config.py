@@ -23,9 +23,11 @@ class MyDummyAuthenticator(DummyAuthenticator):
 
 # Authentication settings - put these first!
 c.JupyterHub.authenticator_class = DummyAuthenticator
-# c.DummyAuthenticator.password = "test123"
-c.Authenticator.admin_users = {'yuval', 'john'}
-c.Authenticator.allowed_users = {'yuval', 'john'}
+c.Authenticator.admin_users = {'yuval'}
+names_dict = { "student" + str(num) for num in range(1, 31)}
+names_dict.add('yuval')
+c.Authenticator.allowed_users = names_dict
+
 
 # Remove this line as it's for LocalAuthenticator
 # c.LocalAuthenticator.create_system_users = True
