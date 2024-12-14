@@ -7,10 +7,7 @@ services:
     volumes:
     - jupyterhub_data:/data
     - /var/run/docker.sock:/var/run/docker.sock
-    - type: bind
-      source: ./jupyterhub_config.py
-      target: /srv/jupyterhub/jupyterhub_config.py
-      read_only: true
+    - ./config:/etc/jupyterhub
 
     ports:
       - "8000:8000"
