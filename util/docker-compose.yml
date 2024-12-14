@@ -2,7 +2,7 @@ version: '3'
 
 services:
   jupyterhub:
-    image: jupyterhub/jupyterhub:latest
+    build: .  # Build from our Dockerfile
     command: bash /etc/jupyterhub/start.sh
     container_name: jupyterhub
     volumes:
