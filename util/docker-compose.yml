@@ -8,7 +8,7 @@ services:
     - jupyterhub_data:/data
     - /var/run/docker.sock:/var/run/docker.sock
     - type: bind
-      source: ./config/jupyterhub_config.py
+      source: ./jupyterhub_config.py
       target: /srv/jupyterhub/jupyterhub_config.py
       read_only: true
 
