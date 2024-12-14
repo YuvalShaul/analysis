@@ -1,19 +1,5 @@
-
-
-python3 -m venv jupyterhub-env
-source jupyterhub-env/bin/activate  # On Windows: jupyterhub-env\Scripts\activate
-
-pip install jupyterhub
-pip install dockerspawner
-pip install jupyterhub-dummyauthenticator  # Optional, for testing
-
-pip install jupyterhub-dockerspawner
-
-
-
-
-
 mkdir jupyterhub
 cd jupyterhub
+
 
 docker-compose up -d

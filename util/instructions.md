@@ -13,11 +13,5 @@ git clone https://github.com/YuvalShaul/analysis.git
 ```
 - Install docker:
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+source install_docker_ubuntu
 ```
-- Post install (so that you don't need sudo):
-```
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
-echo LOGOUT!!!
