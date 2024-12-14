@@ -1,6 +1,7 @@
 from traitlets.config import get_config
 from jupyterhub.auth import DummyAuthenticator
 from jupyterhub.spawner import LocalProcessSpawner
+import secrets
 import os
 
 print('Loding this file!!!')
@@ -29,5 +30,8 @@ c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
 
 # Debug and security
 c.JupyterHub.log_level = 'DEBUG'
-c.JupyterHub.cookie_secret = bytes(32)
-c.ConfigurableHTTPProxy.auth_token = bytes(32)
+# c.JupyterHub.cookie_secret = bytes(32)
+# c.ConfigurableHTTPProxy.auth_token = bytes(32)
+
+c.ConfigurableHTTPProxy.auth_token = secrets.token_hex(32)
+c.JupyterHub.cookie_secret = secrets.token_bytes(32)
