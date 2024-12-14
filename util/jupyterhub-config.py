@@ -23,7 +23,7 @@ c.DockerSpawner.remove = True
 c.JupyterHub.log_level = 'DEBUG'
 
 # Use Local Authenticator
-c.JupyterHub.authenticator_class = 'jupyterhub.auth.LocalAuthenticator'
+c.JupyterHub.authenticator_class = 'jupyterhub.auth.DummyAuthenticator'
 c.LocalAuthenticator.create_system_users = True
 c.Authenticator.admin_users = {'yuval'}
 
