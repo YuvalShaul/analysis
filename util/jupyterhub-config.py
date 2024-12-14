@@ -29,5 +29,6 @@ c.Authenticator.admin_users = {'yuval'}
 
 c.Authenticator.allowed_users = {'yuval'}
 
-
+c.JupyterHub.cookie_secret = bytes(32)  # Generate a random cookie secret
+c.ConfigurableHTTPProxy.auth_token = bytes(32)  # Generate a random token
 
