@@ -8,7 +8,7 @@ services:
     command: bash /etc/jupyterhub/start.sh
     container_name: jupyterhub
     volumes:
-    - jupyterhub_data:/data
+    - jupyterhub_data:/analysis
     - /var/run/docker.sock:/var/run/docker.sock
     - ./config:/etc/jupyterhub
 
