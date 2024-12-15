@@ -41,5 +41,4 @@ echo "User: john   Password: pass_john"
 echo "=========================="
 
 # Start JupyterHub
-jupyterhub -f /etc/jupyterhub/jupyterhub_config.py --no-browser --notebook-dir=/analysis
-# command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --notebook-dir=/analysis --allow-root
+jupyterhub -f /etc/jupyterhub/jupyterhub_config.py 

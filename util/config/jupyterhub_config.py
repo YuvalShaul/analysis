@@ -35,6 +35,7 @@ c.Authenticator.allowed_users = names_dict
 # Basic Configuration
 c.JupyterHub.ip = '0.0.0.0'
 c.JupyterHub.port = 8000
+c.Spawner.notebook_dir = '/analysis'
 
 # Use DockerSpawner
 # c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
