@@ -8,5 +8,5 @@ RUN pip install pandas
 RUN pip install matplotlib
 RUN pip install scipy
 
-COPY ~/analysis/  .
+COPY ../../analysis/  .
 
