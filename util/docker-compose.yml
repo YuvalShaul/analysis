@@ -2,7 +2,9 @@ version: '3'
 
 services:
   jupyterhub:
-    build: .  # Build from our Dockerfile
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
     command: bash /etc/jupyterhub/start.sh
     container_name: jupyterhub
     volumes:
