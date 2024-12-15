@@ -4,7 +4,7 @@ services:
   jupyterhub:
     build:
       context: ..
-      dockerfile: ./Dockerfile
+      dockerfile: ./util/Dockerfile
     command: bash /etc/jupyterhub/start.sh
     container_name: jupyterhub
     volumes:
